@@ -1,7 +1,7 @@
-//Sorting Algorithm Visualization JS implementation
+//Sorting Algorithms Visualization JS implementation
 
 //Animation speed 
-const ANIMATION_SPEED = 4;
+const ANIMATION_SPEED = 2;
 
 //Creating new DOM element for the each Array bar
 let newElement = document.createElement('barGraph');
@@ -47,7 +47,7 @@ function createArray() {
         let screenWidth = window.innerWidth;
         let screenHeight = window.innerHeight;
 
-        for (let i = 0; i < Math.floor(screenWidth/10); ++i) {
+        for (let i = 0; i < Math.floor(screenWidth/17); ++i) {
                 array.push(randomIntOnInterval(screenHeight*0.05, screenHeight*0.9));
         }
         function shuffleArray(inputArray) {
@@ -240,7 +240,7 @@ function bubbleSort(input) {
                                 //the bars are being checked 
                                 bubbleAnimation.push([i, i+1, 'color', 'change']);
                                 //Pushes indices to bubbleAnimation to revert the color 
-                                bubbleAnimation.push([i, i+1, 'color', 'rever']);   
+                                bubbleAnimation.push([i, i+1, 'color', 'revert']);   
                                 //Pushes indices to bubbleAnimation to change the height of 
                                 //the array bars
                                 bubbleAnimation.push([i, i+1, 'height']);
